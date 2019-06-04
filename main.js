@@ -8,8 +8,7 @@ class Numberdrome {
     };
 
     removeNumber(n) {
-        const index = this.list.find(number => number === n);
-        this.list.splice(index, 1);
+        this.list = this.list.filter(number => number !== n)
     };
 
     sum() {
@@ -21,28 +20,18 @@ class Numberdrome {
     };
 
     min() {
-        try {
             if (this.list.length === 0) {
                 throw new Error('No numbers');
             }
 
             return Math.min(...this.list);
-        } catch(e) {
-            console.log(e);
-            return false;
-        }
     };
 
     max() {
-        try {
             if (this.list.length === 0) {
                 throw new Error('No numbers');
             }
 
             return Math.max(...this.list);
-        } catch(e) {
-            console.log(e);
-            return false;
-        }
     };
 }
