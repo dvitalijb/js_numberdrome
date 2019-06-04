@@ -24,7 +24,7 @@ class Numberdrome {
                 throw new Error('No numbers');
             }
 
-            return Math.min(...this.list);
+            return Math.min(this.list);
     };
 
     max() {
@@ -32,6 +32,6 @@ class Numberdrome {
                 throw new Error('No numbers');
             }
 
-            return Math.max(...this.list);
+            return Math.max(this.list);
     };
 }
